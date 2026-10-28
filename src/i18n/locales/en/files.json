@@ -1,0 +1,42 @@
+{
+  "eyebrow": "Documents",
+  "subtitle": "Drawings, PDFs, photos and archives by project.",
+  "upload": {
+    "title": "Upload files",
+    "drop": "Drop files here",
+    "or": "or",
+    "browse": "browse your computer",
+    "limits": "Max {{size}} per file · {{count}} files at once",
+    "types": "Allowed: {{list}}",
+    "project": "Project",
+    "selectProject": "Select a project",
+    "projectRequired": "Select a project first",
+    "start": "Upload",
+    "uploading": "Uploading… {{progress}}%",
+    "done": "Uploaded",
+    "failed": "Upload failed",
+    "selected_one": "{{count}} file selected",
+    "selected_other": "{{count}} files selected",
+    "remove": "Remove “{{name}}”",
+    "tooMany": "At most {{max}} files at once",
+    "progressLabel": "Upload progress: {{name}}"
+  },
+  "filters": {
+    "type": "Type",
+    "project": "Project",
+    "search": "Search by file name",
+    "allTypes": "All types",
+    "allProjects": "All projects"
+  },
+  "card": {
+    "download": "Download “{{name}}”",
+    "delete": "Delete “{{name}}”",
+    "preview": "{{name}} — preview",
+    "uploadedBy": "Uploaded by {{name}}"
+  },
+  "deleted": "File deleted",
+  "empty": {
+    "title": "No files",
+    "text": "Upload drawings, photos or documents."
+  }
+}

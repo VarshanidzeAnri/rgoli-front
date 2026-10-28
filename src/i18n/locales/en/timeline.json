@@ -1,0 +1,18 @@
+{
+  "eyebrow": "Schedule",
+  "subtitle": "Projects and phases on a time axis",
+  "zoom": {
+    "label": "Zoom",
+    "month": "Month",
+    "quarter": "Quarter"
+  },
+  "project": "Project",
+  "today": "Today",
+  "expand": "Show phases: {{name}}",
+  "collapse": "Hide phases: {{name}}",
+  "noPhase": "No phase",
+  "noDates": "No dates set",
+  "barLabel": "{{name}}: {{start}} — {{end}}, {{progress}}%",
+  "empty": "No projects in this period",
+  "range": "{{from}} — {{to}}"
+}

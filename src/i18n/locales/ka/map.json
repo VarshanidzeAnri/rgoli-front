@@ -1,0 +1,40 @@
+{
+  "eyebrow": "პროექტების ლოკაციები",
+  "subtitle": "ობიექტები ბათუმის რუკაზე — რადარი, OpenStreetMap და Google Maps.",
+  "list": {
+    "title": "პროექტები რუკაზე",
+    "noCoords": "კოორდინატები არ არის",
+    "editLocation": "ლოკაციის შეცვლა",
+    "show": "რუკაზე ჩვენება",
+    "located_one": "{{count}} ლოკაცია",
+    "located_other": "{{count}} ლოკაცია"
+  },
+  "modes": {
+    "label": "რუკის რეჟიმი",
+    "offline": "Offline radar",
+    "osm": "OpenStreetMap",
+    "google": "Google Maps"
+  },
+  "radar": {
+    "label": "პროექტების რადარი",
+    "pin": "{{number}}. {{name}}",
+    "north": "ჩრდ"
+  },
+  "openInGoogle": "Google Maps-ში გახსნა",
+  "googleTitle": "Google რუკა — {{name}}",
+  "clickToSet": "დააწკაპუნეთ რუკაზე „{{name}}“-ის ლოკაციის დასაყენებლად",
+  "selectFirst": "აირჩიეთ პროექტი სიიდან",
+  "locationSaved": "ლოკაცია შენახულია",
+  "coords": "{{lat}}, {{lng}}",
+  "empty": {
+    "title": "პროექტები არ არის",
+    "text": "როცა პროექტებს კოორდინატები ექნებათ, ისინი აქ გამოჩნდება."
+  },
+  "dialog": {
+    "title": "ლოკაციის შეცვლა",
+    "description": "მიუთითეთ კოორდინატები ან დააწკაპუნეთ OpenStreetMap-ზე.",
+    "lat": "განედი (lat)",
+    "lng": "გრძედი (lng)",
+    "address": "მისამართი"
+  }
+}

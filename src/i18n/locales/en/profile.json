@@ -1,0 +1,44 @@
+{
+  "eyebrow": "Profile",
+  "title": "My profile",
+  "subtitle": "Personal details, interface preferences and password",
+  "details": {
+    "title": "Personal details",
+    "name": "Name",
+    "jobTitle": "Job title",
+    "email": "Email",
+    "save": "Save",
+    "saved": "Profile saved"
+  },
+  "avatar": {
+    "title": "Avatar",
+    "choose": "Choose image",
+    "upload": "Upload",
+    "hint": "JPG, PNG or WEBP, up to 2 MB",
+    "tooLarge": "The file is larger than 2 MB",
+    "wrongType": "Only JPG, PNG or WEBP are allowed",
+    "uploaded": "Avatar updated",
+    "preview": "Avatar preview"
+  },
+  "preferences": {
+    "title": "Interface",
+    "hint": "Saved in this browser only",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "password": {
+    "title": "Change password",
+    "current": "Current password",
+    "new": "New password",
+    "confirm": "Repeat new password",
+    "submit": "Change password",
+    "changed": "Password changed. Other devices were signed out."
+  },
+  "access": {
+    "title": "Access",
+    "roles": "Roles",
+    "disciplines": "Disciplines",
+    "permissions": "Permissions",
+    "noDisciplines": "No disciplines assigned"
+  }
+}

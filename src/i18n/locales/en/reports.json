@@ -1,0 +1,40 @@
+{
+  "eyebrow": "Analytics",
+  "subtitle": "Task completion, project progress, budget and team workload.",
+  "range": {
+    "from": "Period — from",
+    "to": "Period — to"
+  },
+  "kpi": {
+    "completion": "Task completion",
+    "completionHint": "{{done}} of {{total}} done",
+    "progress": "Average project progress",
+    "progressHint": "All visible projects",
+    "outstanding": "Outstanding budget",
+    "outstandingHint": "Still to be paid by clients"
+  },
+  "charts": {
+    "statusTitle": "Tasks by status",
+    "statusDescription": "Donut chart. {{summary}}",
+    "plannedTitle": "Planned vs paid",
+    "plannedDescription": "Bar chart by project: planned and paid amounts.",
+    "planned": "Planned",
+    "paid": "Paid",
+    "total": "Total",
+    "noData": "No data",
+    "showTable": "Show table",
+    "showChart": "Show chart",
+    "project": "Project",
+    "count": "Count"
+  },
+  "workload": {
+    "title": "Team workload",
+    "load": "Load {{percent}}%",
+    "overloaded": "High load",
+    "empty": "No open tasks"
+  },
+  "export": {
+    "tasks": "Tasks CSV",
+    "projects": "Projects CSV"
+  }
+}

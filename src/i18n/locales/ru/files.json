@@ -1,0 +1,44 @@
+{
+  "eyebrow": "Документы",
+  "subtitle": "Чертежи, PDF, фото и архивы по проектам.",
+  "upload": {
+    "title": "Загрузка файлов",
+    "drop": "Перетащите файлы сюда",
+    "or": "или",
+    "browse": "выберите на компьютере",
+    "limits": "Макс. {{size}} на файл · {{count}} файлов за раз",
+    "types": "Разрешено: {{list}}",
+    "project": "Проект",
+    "selectProject": "Выберите проект",
+    "projectRequired": "Сначала выберите проект",
+    "start": "Загрузить",
+    "uploading": "Загрузка… {{progress}}%",
+    "done": "Загружено",
+    "failed": "Не удалось загрузить",
+    "selected_one": "Выбран {{count}} файл",
+    "selected_few": "Выбрано {{count}} файла",
+    "selected_many": "Выбрано {{count}} файлов",
+    "selected_other": "Выбрано {{count}} файла",
+    "remove": "Убрать «{{name}}»",
+    "tooMany": "Не более {{max}} файлов за раз",
+    "progressLabel": "Прогресс загрузки: {{name}}"
+  },
+  "filters": {
+    "type": "Тип",
+    "project": "Проект",
+    "search": "Поиск по имени файла",
+    "allTypes": "Все типы",
+    "allProjects": "Все проекты"
+  },
+  "card": {
+    "download": "Скачать «{{name}}»",
+    "delete": "Удалить «{{name}}»",
+    "preview": "{{name}} — просмотр",
+    "uploadedBy": "Загрузил(а): {{name}}"
+  },
+  "deleted": "Файл удалён",
+  "empty": {
+    "title": "Нет файлов",
+    "text": "Загрузите чертежи, фото или документы."
+  }
+}

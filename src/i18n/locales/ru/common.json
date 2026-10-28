@@ -1,0 +1,183 @@
+{
+  "brand": {
+    "name": "RGOLI ZEROFRAME OS",
+    "wordmarkTop": "RGOLI",
+    "wordmarkBottom": "ZeroFrame",
+    "tagline": "Операционная система архитектурной студии",
+    "systemOnline": "system online",
+    "version": "v{{version}}",
+    "footer": "RGOLI ZEROFRAME OS · {{version}}",
+    "footerPlace": "{{year}} · Batumi, GE"
+  },
+  "actions": {
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Изменить",
+    "create": "Создать",
+    "add": "Добавить",
+    "close": "Закрыть",
+    "confirm": "Подтвердить",
+    "back": "Назад",
+    "retry": "Повторить",
+    "search": "Поиск",
+    "filter": "Фильтр",
+    "clear": "Очистить",
+    "upload": "Загрузить",
+    "download": "Скачать",
+    "open": "Открыть",
+    "export": "Экспорт",
+    "viewAll": "Смотреть все",
+    "more": "Ещё",
+    "apply": "Применить",
+    "today": "Сегодня",
+    "previous": "Назад",
+    "next": "Вперёд"
+  },
+  "saved": "Сохранено",
+  "deleted": "Удалено",
+  "noAccess": "Нет доступа",
+  "noResults": "Ничего не найдено",
+  "loading": "Загрузка…",
+  "all": "Все",
+  "none": "Нет",
+  "optional": "необязательно",
+  "yes": "Да",
+  "no": "Нет",
+  "empty": {
+    "title": "Здесь пока пусто",
+    "text": "Добавьте первую запись, и она появится здесь."
+  },
+  "errors": {
+    "generic": "Что-то пошло не так",
+    "server": "Не удалось связаться с сервером. Повторите позже.",
+    "boundaryTitle": "Страница не загрузилась",
+    "boundaryText": "Произошла непредвиденная ошибка. Попробуйте обновить страницу.",
+    "notFoundTitle": "Страница не найдена",
+    "notFoundText": "Такого адреса нет или он был удалён.",
+    "forbiddenTitle": "Нет доступа",
+    "forbiddenText": "У вас нет прав для этой страницы. Обратитесь к администратору.",
+    "goHome": "На дашборд"
+  },
+  "confirm": {
+    "title": "Вы уверены?",
+    "deleteText": "«{{name}}» будет удалено. Это действие нельзя отменить.",
+    "deleteAction": "Да, удалить"
+  },
+  "search": {
+    "placeholder": "Поиск по проектам, задачам, файлам...",
+    "shortcut": "Ctrl K",
+    "hint": "Введите минимум 2 символа",
+    "groups": {
+      "projects": "Проекты",
+      "issues": "Задачи",
+      "files": "Файлы"
+    },
+    "label": "Глобальный поиск"
+  },
+  "quickAdd": {
+    "title": "Быстрое добавление",
+    "project": "Новый проект",
+    "issue": "Новая задача",
+    "file": "Загрузить файл",
+    "salaryRequest": "Заявка на оплату"
+  },
+  "language": {
+    "label": "Язык",
+    "ka": "ქართული",
+    "en": "English",
+    "ru": "Русский",
+    "short": {
+      "ka": "KA",
+      "en": "EN",
+      "ru": "RU"
+    }
+  },
+  "theme": {
+    "label": "Тема",
+    "dark": "Тёмная",
+    "light": "Светлая",
+    "toggle": "Переключить тему"
+  },
+  "notifications": {
+    "title": "Уведомления",
+    "empty": "Новых уведомлений нет",
+    "markAll": "Прочитать все",
+    "unread_one": "{{count}} непрочитанное",
+    "unread_few": "{{count}} непрочитанных",
+    "unread_many": "{{count}} непрочитанных",
+    "unread_other": "{{count}} непрочитанных"
+  },
+  "userMenu": {
+    "label": "Меню пользователя",
+    "profile": "Профиль",
+    "logout": "Выйти"
+  },
+  "pagination": {
+    "label": "Страницы",
+    "summary": "{{from}}–{{to}} из {{total}}"
+  },
+  "counts": {
+    "tasks_one": "{{count}} задача",
+    "tasks_few": "{{count}} задачи",
+    "tasks_many": "{{count}} задач",
+    "tasks_other": "{{count}} задачи",
+    "projects_one": "{{count}} проект",
+    "projects_few": "{{count}} проекта",
+    "projects_many": "{{count}} проектов",
+    "projects_other": "{{count}} проекта",
+    "files_one": "{{count}} файл",
+    "files_few": "{{count}} файла",
+    "files_many": "{{count}} файлов",
+    "files_other": "{{count}} файла",
+    "points_one": "{{count}} очко",
+    "points_few": "{{count}} очка",
+    "points_many": "{{count}} очков",
+    "points_other": "{{count}} очка",
+    "days_one": "{{count}} день",
+    "days_few": "{{count}} дня",
+    "days_many": "{{count}} дней",
+    "days_other": "{{count}} дня",
+    "members_one": "{{count}} участник",
+    "members_few": "{{count}} участника",
+    "members_many": "{{count}} участников",
+    "members_other": "{{count}} участника"
+  },
+  "fields": {
+    "name": "Имя",
+    "email": "E-mail",
+    "password": "Пароль",
+    "project": "Проект",
+    "status": "Статус",
+    "priority": "Приоритет",
+    "discipline": "Дисциплина",
+    "assignee": "Исполнитель",
+    "assignees": "Исполнители",
+    "dueDate": "Срок",
+    "startDate": "Начало",
+    "endDate": "Окончание",
+    "description": "Описание",
+    "amount": "Сумма",
+    "note": "Примечание",
+    "title": "Название",
+    "points": "Очки",
+    "members": "Участники",
+    "date": "Дата",
+    "owner": "Владелец",
+    "size": "Размер",
+    "type": "Тип",
+    "progress": "Прогресс"
+  },
+  "a11y": {
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "breadcrumb": "Навигационная цепочка",
+    "mainContent": "Основное содержимое",
+    "skipToContent": "Перейти к содержимому",
+    "avatarOf": "Аватар: {{name}}",
+    "moreUsers": "Ещё {{count}}"
+  },
+  "unassigned": "Не назначено",
+  "overdue": "Просрочено",
+  "of": "{{value}} из {{total}}"
+}

@@ -1,0 +1,69 @@
+{
+  "eyebrow": "სამუშაო ცენტრი",
+  "greeting": "გამარჯობა, {{name}}",
+  "subtitle": "დღევანდელი მიმოხილვა: პროექტები, დავალებები, ფინანსები და გუნდი.",
+  "meta": {
+    "team_one": "{{count}} გუნდის წევრი",
+    "team_other": "{{count}} გუნდის წევრი",
+    "myTasks_one": "{{count}} ჩემი დავალება ამ კვირაში",
+    "myTasks_other": "{{count}} ჩემი დავალება ამ კვირაში"
+  },
+  "kpi": {
+    "activeProjects": "აქტიური პროექტები",
+    "activeProjectsHint": "დაუსრულებელი პროექტები",
+    "openTasks": "ღია დავალებები",
+    "critical_one": "{{count}} კრიტიკული",
+    "critical_other": "{{count}} კრიტიკული",
+    "budget": "პორტფელის ბიუჯეტი",
+    "budgetHint": "გადახდილი {{paid}} · დარჩენილი {{remaining}}",
+    "paidShare": "კლიენტებისგან გადახდილი",
+    "pendingSalary": "მოლოდინში მოთხოვნები",
+    "pendingSalaryHint": "ხელფასის მოთხოვნები დასამტკიცებლად"
+  },
+  "projects": {
+    "title": "პროექტები",
+    "eyebrow": "პორტფელი",
+    "distribution": "სტატუსების განაწილება",
+    "empty": "ხილული პროექტები ჯერ არ არის",
+    "noPhase": "ფაზა არ არის"
+  },
+  "activity": {
+    "title": "აქტივობა",
+    "eyebrow": "ბოლო მოვლენები",
+    "empty": "აქტივობა ჯერ არ არის",
+    "line": "{{user}} {{verb}} {{subject}}",
+    "system": "სისტემამ",
+    "changed": "შეიცვალა: {{fields}}",
+    "verb": {
+      "created": "შექმნა",
+      "updated": "განაახლა",
+      "deleted": "წაშალა",
+      "moved": "გადაიტანა"
+    },
+    "subject": {
+      "project": "პროექტი",
+      "phase": "ფაზა",
+      "issue": "დავალება",
+      "sprint": "სპრინტი",
+      "comment": "კომენტარი",
+      "file": "ფაილი",
+      "client_payment": "კლიენტის გადახდა",
+      "salary_request": "ხელფასის მოთხოვნა",
+      "other": "ჩანაწერი"
+    }
+  },
+  "workload": {
+    "title": "გუნდის დატვირთვა",
+    "eyebrow": "ღია ქულები",
+    "empty": "გუნდის მონაცემები არ არის",
+    "openTasks_one": "{{count}} ღია დავალება",
+    "openTasks_other": "{{count}} ღია დავალება",
+    "load": "{{value}}%",
+    "loadLabel": "{{name}}-ის დატვირთვა"
+  },
+  "myWeek": {
+    "title": "ჩემი დავალებები ამ კვირაში",
+    "eyebrow": "ვადები",
+    "empty": "ამ კვირაში ვადიანი დავალება არ გაქვთ"
+  }
+}

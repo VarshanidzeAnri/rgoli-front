@@ -1,0 +1,60 @@
+{
+  "moved": "Task moved",
+  "moveFailed": "Could not move the task",
+  "eyebrow": "Task board",
+  "subtitle": "Drag cards between columns to change their status",
+  "filters": {
+    "label": "Board filters",
+    "project": "Project",
+    "allProjects": "All projects",
+    "assignee": "Assignee",
+    "allAssignees": "All assignees",
+    "onlyMine": "Only mine",
+    "clear": "Clear filters"
+  },
+  "column": {
+    "add": "Add task: {{status}}",
+    "empty": "No tasks here",
+    "label": "{{status}} — {{count}}"
+  },
+  "card": {
+    "open": "{{key}} — {{title}}. Press to open",
+    "dragDisabled": "You don't have permission to move tasks",
+    "due": "Due {{date}}"
+  },
+  "dnd": {
+    "instructions": "Press Space or Enter to pick up a task. Use the arrow keys to move it, Space or Enter to drop, Escape to cancel.",
+    "pickup": "Picked up task “{{title}}”",
+    "over": "“{{title}}” is over column “{{status}}”",
+    "drop": "“{{title}}” dropped in column “{{status}}”",
+    "cancel": "Move cancelled"
+  },
+  "issue": {
+    "eyebrow": "Task",
+    "createTitle": "New task",
+    "editTitle": "Edit task",
+    "created": "Task created",
+    "saved": "Saved",
+    "deleted": "Task deleted",
+    "selectProject": "Choose a project",
+    "noAssignees": "No assignees",
+    "titlePlaceholder": "e.g. Prepare the facade drawing",
+    "details": "Details",
+    "created_at": "Created {{date}}",
+    "moveTo": "Change status",
+    "notFound": "Task not found",
+    "edit": "Edit"
+  },
+  "comments": {
+    "title": "Comments",
+    "empty": "No comments yet",
+    "placeholder": "Write a comment…",
+    "add": "Send",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleted": "Comment deleted",
+    "added": "Comment added",
+    "label": "New comment",
+    "editLabel": "Edit comment"
+  }
+}

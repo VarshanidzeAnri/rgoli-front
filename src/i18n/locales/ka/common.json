@@ -1,0 +1,169 @@
+{
+  "brand": {
+    "name": "RGOLI ZEROFRAME OS",
+    "wordmarkTop": "RGOLI",
+    "wordmarkBottom": "ZeroFrame",
+    "tagline": "არქიტექტურის სტუდიის ოპერაციული სისტემა",
+    "systemOnline": "system online",
+    "version": "v{{version}}",
+    "footer": "RGOLI ZEROFRAME OS · {{version}}",
+    "footerPlace": "{{year}} · Batumi, GE"
+  },
+  "actions": {
+    "save": "შენახვა",
+    "cancel": "გაუქმება",
+    "delete": "წაშლა",
+    "edit": "რედაქტირება",
+    "create": "შექმნა",
+    "add": "დამატება",
+    "close": "დახურვა",
+    "confirm": "დადასტურება",
+    "back": "უკან",
+    "retry": "თავიდან ცდა",
+    "search": "ძებნა",
+    "filter": "ფილტრი",
+    "clear": "გასუფთავება",
+    "upload": "ატვირთვა",
+    "download": "ჩამოტვირთვა",
+    "open": "გახსნა",
+    "export": "ექსპორტი",
+    "viewAll": "ყველას ნახვა",
+    "more": "მეტი",
+    "apply": "გამოყენება",
+    "today": "დღეს",
+    "previous": "წინა",
+    "next": "შემდეგი"
+  },
+  "saved": "შენახულია",
+  "deleted": "წაშლილია",
+  "noAccess": "წვდომა არ არის",
+  "noResults": "შედეგი არ მოიძებნა",
+  "loading": "იტვირთება…",
+  "all": "ყველა",
+  "none": "არცერთი",
+  "optional": "არასავალდებულო",
+  "yes": "კი",
+  "no": "არა",
+  "empty": {
+    "title": "აქ ჯერ არაფერია",
+    "text": "დაამატეთ პირველი ჩანაწერი და ის აქ გამოჩნდება."
+  },
+  "errors": {
+    "generic": "რაღაც შეცდომა მოხდა",
+    "server": "სერვერთან კავშირი ვერ დამყარდა. სცადეთ მოგვიანებით.",
+    "boundaryTitle": "გვერდი ვერ ჩაიტვირთა",
+    "boundaryText": "მოულოდნელი შეცდომა. სცადეთ გვერდის განახლება.",
+    "notFoundTitle": "გვერდი ვერ მოიძებნა",
+    "notFoundText": "ასეთი მისამართი არ არსებობს ან წაშლილია.",
+    "forbiddenTitle": "წვდომა არ არის",
+    "forbiddenText": "ამ გვერდის სანახავად საჭირო უფლება არ გაქვთ. მიმართეთ ადმინისტრატორს.",
+    "goHome": "დეშბორდზე დაბრუნება"
+  },
+  "confirm": {
+    "title": "დარწმუნებული ხართ?",
+    "deleteText": "„{{name}}“ წაიშლება. ამ მოქმედების გაუქმება შეუძლებელია.",
+    "deleteAction": "დიახ, წაშლა"
+  },
+  "search": {
+    "placeholder": "ძებნა პროექტებში, დავალებებში, ფაილებში...",
+    "shortcut": "Ctrl K",
+    "hint": "აკრიფეთ მინიმუმ 2 სიმბოლო",
+    "groups": {
+      "projects": "პროექტები",
+      "issues": "დავალებები",
+      "files": "ფაილები"
+    },
+    "label": "გლობალური ძებნა"
+  },
+  "quickAdd": {
+    "title": "სწრაფი დამატება",
+    "project": "ახალი პროექტი",
+    "issue": "ახალი დავალება",
+    "file": "ფაილის ატვირთვა",
+    "salaryRequest": "ხელფასის მოთხოვნა"
+  },
+  "language": {
+    "label": "ენა",
+    "ka": "ქართული",
+    "en": "English",
+    "ru": "Русский",
+    "short": {
+      "ka": "KA",
+      "en": "EN",
+      "ru": "RU"
+    }
+  },
+  "theme": {
+    "label": "თემა",
+    "dark": "მუქი",
+    "light": "ღია",
+    "toggle": "თემის გადართვა"
+  },
+  "notifications": {
+    "title": "შეტყობინებები",
+    "empty": "ახალი შეტყობინება არ არის",
+    "markAll": "ყველას წაკითხვა",
+    "unread_one": "{{count}} წაუკითხავი",
+    "unread_other": "{{count}} წაუკითხავი"
+  },
+  "userMenu": {
+    "label": "მომხმარებლის მენიუ",
+    "profile": "პროფილი",
+    "logout": "გამოსვლა"
+  },
+  "pagination": {
+    "label": "გვერდები",
+    "summary": "{{from}}–{{to}} / {{total}}"
+  },
+  "counts": {
+    "tasks_one": "{{count}} დავალება",
+    "tasks_other": "{{count}} დავალება",
+    "projects_one": "{{count}} პროექტი",
+    "projects_other": "{{count}} პროექტი",
+    "files_one": "{{count}} ფაილი",
+    "files_other": "{{count}} ფაილი",
+    "points_one": "{{count}} ქულა",
+    "points_other": "{{count}} ქულა",
+    "days_one": "{{count}} დღე",
+    "days_other": "{{count}} დღე",
+    "members_one": "{{count}} წევრი",
+    "members_other": "{{count}} წევრი"
+  },
+  "fields": {
+    "name": "სახელი",
+    "email": "ელ. ფოსტა",
+    "password": "პაროლი",
+    "project": "პროექტი",
+    "status": "სტატუსი",
+    "priority": "პრიორიტეტი",
+    "discipline": "დისციპლინა",
+    "assignee": "შემსრულებელი",
+    "assignees": "შემსრულებლები",
+    "dueDate": "ვადა",
+    "startDate": "დაწყება",
+    "endDate": "დასრულება",
+    "description": "აღწერა",
+    "amount": "თანხა",
+    "note": "შენიშვნა",
+    "title": "სათაური",
+    "points": "ქულები",
+    "members": "წევრები",
+    "date": "თარიღი",
+    "owner": "მფლობელი",
+    "size": "ზომა",
+    "type": "ტიპი",
+    "progress": "პროგრესი"
+  },
+  "a11y": {
+    "openMenu": "მენიუს გახსნა",
+    "closeMenu": "მენიუს დახურვა",
+    "breadcrumb": "ნავიგაციის ბილიკი",
+    "mainContent": "მთავარი შიგთავსი",
+    "skipToContent": "შიგთავსზე გადასვლა",
+    "avatarOf": "{{name}}-ის ავატარი",
+    "moreUsers": "კიდევ {{count}}"
+  },
+  "unassigned": "მიუნიჭებელი",
+  "overdue": "ვადაგადაცილებული",
+  "of": "{{value}} / {{total}}"
+}

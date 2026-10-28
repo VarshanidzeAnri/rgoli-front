@@ -1,0 +1,169 @@
+{
+  "brand": {
+    "name": "RGOLI ZEROFRAME OS",
+    "wordmarkTop": "RGOLI",
+    "wordmarkBottom": "ZeroFrame",
+    "tagline": "Operating system for an architecture studio",
+    "systemOnline": "system online",
+    "version": "v{{version}}",
+    "footer": "RGOLI ZEROFRAME OS · {{version}}",
+    "footerPlace": "{{year}} · Batumi, GE"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "add": "Add",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "retry": "Try again",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "upload": "Upload",
+    "download": "Download",
+    "open": "Open",
+    "export": "Export",
+    "viewAll": "View all",
+    "more": "More",
+    "apply": "Apply",
+    "today": "Today",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "saved": "Saved",
+  "deleted": "Deleted",
+  "noAccess": "No access",
+  "noResults": "No results found",
+  "loading": "Loading…",
+  "all": "All",
+  "none": "None",
+  "optional": "optional",
+  "yes": "Yes",
+  "no": "No",
+  "empty": {
+    "title": "Nothing here yet",
+    "text": "Add the first record and it will show up here."
+  },
+  "errors": {
+    "generic": "Something went wrong",
+    "server": "Could not reach the server. Please try again later.",
+    "boundaryTitle": "This page failed to load",
+    "boundaryText": "An unexpected error occurred. Try reloading the page.",
+    "notFoundTitle": "Page not found",
+    "notFoundText": "This address doesn't exist or was removed.",
+    "forbiddenTitle": "No access",
+    "forbiddenText": "You don't have the permission needed for this page. Ask an administrator.",
+    "goHome": "Back to dashboard"
+  },
+  "confirm": {
+    "title": "Are you sure?",
+    "deleteText": "“{{name}}” will be deleted. This cannot be undone.",
+    "deleteAction": "Yes, delete"
+  },
+  "search": {
+    "placeholder": "Search projects, tasks, files...",
+    "shortcut": "Ctrl K",
+    "hint": "Type at least 2 characters",
+    "groups": {
+      "projects": "Projects",
+      "issues": "Tasks",
+      "files": "Files"
+    },
+    "label": "Global search"
+  },
+  "quickAdd": {
+    "title": "Quick add",
+    "project": "New project",
+    "issue": "New task",
+    "file": "Upload file",
+    "salaryRequest": "Salary request"
+  },
+  "language": {
+    "label": "Language",
+    "ka": "ქართული",
+    "en": "English",
+    "ru": "Русский",
+    "short": {
+      "ka": "KA",
+      "en": "EN",
+      "ru": "RU"
+    }
+  },
+  "theme": {
+    "label": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "toggle": "Toggle theme"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "No new notifications",
+    "markAll": "Mark all as read",
+    "unread_one": "{{count}} unread",
+    "unread_other": "{{count}} unread"
+  },
+  "userMenu": {
+    "label": "User menu",
+    "profile": "Profile",
+    "logout": "Sign out"
+  },
+  "pagination": {
+    "label": "Pages",
+    "summary": "{{from}}–{{to}} of {{total}}"
+  },
+  "counts": {
+    "tasks_one": "{{count}} task",
+    "tasks_other": "{{count}} tasks",
+    "projects_one": "{{count}} project",
+    "projects_other": "{{count}} projects",
+    "files_one": "{{count}} file",
+    "files_other": "{{count}} files",
+    "points_one": "{{count}} point",
+    "points_other": "{{count}} points",
+    "days_one": "{{count}} day",
+    "days_other": "{{count}} days",
+    "members_one": "{{count}} member",
+    "members_other": "{{count}} members"
+  },
+  "fields": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "project": "Project",
+    "status": "Status",
+    "priority": "Priority",
+    "discipline": "Discipline",
+    "assignee": "Assignee",
+    "assignees": "Assignees",
+    "dueDate": "Due date",
+    "startDate": "Start",
+    "endDate": "End",
+    "description": "Description",
+    "amount": "Amount",
+    "note": "Note",
+    "title": "Title",
+    "points": "Points",
+    "members": "Members",
+    "date": "Date",
+    "owner": "Owner",
+    "size": "Size",
+    "type": "Type",
+    "progress": "Progress"
+  },
+  "a11y": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "breadcrumb": "Breadcrumb",
+    "mainContent": "Main content",
+    "skipToContent": "Skip to content",
+    "avatarOf": "{{name}}'s avatar",
+    "moreUsers": "{{count}} more"
+  },
+  "unassigned": "Unassigned",
+  "overdue": "Overdue",
+  "of": "{{value}} of {{total}}"
+}

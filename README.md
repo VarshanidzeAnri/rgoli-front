@@ -1,32 +1,35 @@
-# React + TypeScript + Vite
+# RGOLI ZEROFRAME OS — SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React 19 + TypeScript + Vite single-page app for the RGOLI studio OS. Full setup, demo logins and architecture:
+see the workspace [README](../README.md) and [docs](../docs).
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+cp .env.example .env.local   # optional; defaults proxy /api to http://localhost:8000
+npm run dev                  # http://localhost:5173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Scripts
+
+| Command | What |
+| --- | --- |
+| `npm run dev` / `build` / `preview` | Vite dev server / production build / preview |
+| `npm run typecheck` | `tsc -b` (strict, `noUncheckedIndexedAccess`, typed i18n keys) |
+| `npm run lint` | ESLint (typescript-eslint strict, react-hooks, jsx-a11y, i18next no-literal-string) |
+| `npm run format` | Prettier (+ Tailwind class sorting) |
+| `npm run test` / `test:coverage` | Vitest + Testing Library + MSW |
+| `npm run test:e2e` | Playwright (needs the API running with demo data) |
+| `npm run check:i18n` | ka / en / ru key parity incl. plural forms |
+| `npm run check:permissions` | permission union matches `rgoli-api/resources/permissions.json` |
+| `npm run check` | everything above except e2e |
+
+## Layout
+
+`src/app` router & providers · `src/store` Redux Toolkit (auth, ui) + RTK Query base · `src/features/<x>/api.ts`
+endpoints + `components/` · `src/components/{kit,ui,layout}` · `src/pages` (lazy routes) · `src/i18n` ·
+`src/lib` (format, permissions, enums, forms) · `src/types/api.ts` (mirrors Laravel Resources).
+
+Language and theme are saved in `localStorage` only (`rgoli.locale`, `rgoli.theme`); the auth token in
+`rgoli.token`.

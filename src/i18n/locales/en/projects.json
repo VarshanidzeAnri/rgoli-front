@@ -1,0 +1,144 @@
+{
+  "eyebrow": "Portfolio",
+  "title": "Projects",
+  "subtitle": "Architecture, interior and supervision projects in one list.",
+  "new": "New project",
+  "searchPlaceholder": "Search by name, client, address, code...",
+  "searchLabel": "Search projects",
+  "allDisciplines": "All disciplines",
+  "statusFilter": "Status filter",
+  "disciplineFilter": "Discipline filter",
+  "total_one": "{{count}} project",
+  "total_other": "{{count}} projects",
+  "columns": {
+    "project": "Project",
+    "discipline": "Discipline",
+    "status": "Status",
+    "phase": "Current phase",
+    "progress": "Progress",
+    "deadline": "End",
+    "members": "Team",
+    "budget": "Budget"
+  },
+  "empty": {
+    "title": "No projects found",
+    "text": "Change the filters or add a new project."
+  },
+  "noPhase": "No phase",
+  "tabs": {
+    "overview": "Overview",
+    "phases": "Phases",
+    "tasks": "Tasks",
+    "files": "Files",
+    "payments": "Payments",
+    "activity": "Activity"
+  },
+  "overview": {
+    "finance": "Finance",
+    "budget": "Budget",
+    "discount": "Discount price",
+    "paid": "Paid",
+    "remaining": "Remaining",
+    "paidShare": "{{value}}% paid",
+    "tasks": "Tasks",
+    "tasksDone": "{{done}} / {{total}} done",
+    "progress": "Progress",
+    "description": "Description",
+    "noDescription": "No description yet",
+    "details": "Details",
+    "client": "Client",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "dates": "Dates",
+    "coordinates": "Coordinates",
+    "noCoordinates": "No coordinates set",
+    "currentPhase": "Current phase",
+    "members": "Members",
+    "noMembers": "No members",
+    "manageMembers": "Manage members"
+  },
+  "members": {
+    "title": "Manage members",
+    "subtitle": "Choose who works on this project",
+    "empty": "No active users"
+  },
+  "phases": {
+    "title": "Phases",
+    "empty": "No phases yet",
+    "add": "Add phase",
+    "createTitle": "New phase",
+    "editTitle": "Edit phase",
+    "name": "Name",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "edit": "Edit phase",
+    "delete": "Delete phase",
+    "number": "Phase {{number}}"
+  },
+  "tasks": {
+    "title": "Tasks",
+    "empty": "No tasks in this project yet",
+    "add": "New task"
+  },
+  "files": {
+    "title": "Files",
+    "empty": "No files in this project yet",
+    "upload": "Upload file",
+    "download": "Download “{{name}}”"
+  },
+  "payments": {
+    "title": "Client payments",
+    "empty": "No payments yet",
+    "add": "Add payment",
+    "createTitle": "Client payment",
+    "amount": "Amount (₾)",
+    "paidAt": "Payment date",
+    "method": "Method",
+    "note": "Note",
+    "delete": "Delete payment",
+    "total": "Total: {{amount}}",
+    "recordedBy": "Recorded by {{name}}"
+  },
+  "activity": {
+    "title": "Activity",
+    "empty": "No activity yet"
+  },
+  "actions": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "openBoard": "Open on the board"
+  },
+  "notFound": {
+    "title": "Project not found",
+    "text": "The project was deleted or you don't have access to it.",
+    "back": "Back to projects"
+  },
+  "form": {
+    "eyebrow": "Project",
+    "createTitle": "New project",
+    "editTitle": "Edit project",
+    "sectionMain": "Main",
+    "sectionClient": "Client",
+    "sectionMoney": "Budget and progress",
+    "sectionSchedule": "Schedule and location",
+    "key": "Code",
+    "keyHint": "E.g. URK — used in task keys (URK-12)",
+    "name": "Name",
+    "clientName": "Client",
+    "clientPhone": "Phone",
+    "clientEmail": "Email",
+    "address": "Address",
+    "discipline": "Discipline",
+    "status": "Status",
+    "budget": "Budget (₾)",
+    "discountPrice": "Discount price (₾)",
+    "discountHint": "Final agreed price, if different",
+    "progress": "Progress (%)",
+    "startDate": "Start",
+    "endDate": "End",
+    "lat": "Latitude",
+    "lng": "Longitude",
+    "description": "Description"
+  }
+}

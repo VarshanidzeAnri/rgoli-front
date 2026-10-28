@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Calendar",
+  "subtitle": "Task deadlines and project end dates",
+  "legend": {
+    "task": "Task deadline",
+    "milestone": "Project end"
+  },
+  "more": "+{{count}}",
+  "moreLabel": "{{count}} more events",
+  "upcoming": "Upcoming",
+  "upcomingEmpty": "Nothing in the coming days",
+  "dayLabel": "{{date}}: {{count}} events",
+  "milestone": "Ends",
+  "grid": "Month calendar"
+}

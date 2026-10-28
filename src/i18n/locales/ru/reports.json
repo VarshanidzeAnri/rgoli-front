@@ -1,0 +1,40 @@
+{
+  "eyebrow": "Аналитика",
+  "subtitle": "Выполнение задач, прогресс проектов, бюджет и загрузка команды.",
+  "range": {
+    "from": "Период — с",
+    "to": "Период — по"
+  },
+  "kpi": {
+    "completion": "Выполнение задач",
+    "completionHint": "Готово {{done}} из {{total}}",
+    "progress": "Средний прогресс проектов",
+    "progressHint": "Все видимые проекты",
+    "outstanding": "Остаток бюджета",
+    "outstandingHint": "К получению от клиентов"
+  },
+  "charts": {
+    "statusTitle": "Задачи по статусам",
+    "statusDescription": "Кольцевая диаграмма. {{summary}}",
+    "plannedTitle": "План и оплата",
+    "plannedDescription": "Столбчатая диаграмма по проектам: плановая и оплаченная сумма.",
+    "planned": "План",
+    "paid": "Оплачено",
+    "total": "Всего",
+    "noData": "Нет данных",
+    "showTable": "Показать таблицу",
+    "showChart": "Показать диаграмму",
+    "project": "Проект",
+    "count": "Количество"
+  },
+  "workload": {
+    "title": "Загрузка команды",
+    "load": "Загрузка {{percent}}%",
+    "overloaded": "Высокая загрузка",
+    "empty": "Нет открытых задач"
+  },
+  "export": {
+    "tasks": "Задачи CSV",
+    "projects": "Проекты CSV"
+  }
+}

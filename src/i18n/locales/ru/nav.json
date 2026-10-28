@@ -1,0 +1,20 @@
+{
+  "navigation": "Навигация",
+  "management": "Управление",
+  "myProjects": "Мои проекты",
+  "dashboard": "Дашборд",
+  "projects": "Проекты",
+  "board": "Kanban Board",
+  "backlog": "Backlog & Sprints",
+  "timeline": "Timeline",
+  "calendar": "Календарь",
+  "map": "Карта",
+  "files": "Файлы / Docs",
+  "finance": "Финансы / Зарплата",
+  "reports": "Отчёты",
+  "users": "Пользователи",
+  "roles": "Роли",
+  "admin": "Админ-панель",
+  "profile": "Профиль",
+  "noProjects": "Вы пока не участвуете ни в одном проекте"
+}

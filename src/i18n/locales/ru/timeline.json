@@ -1,0 +1,18 @@
+{
+  "eyebrow": "График",
+  "subtitle": "Проекты и фазы на оси времени",
+  "zoom": {
+    "label": "Масштаб",
+    "month": "Месяц",
+    "quarter": "Квартал"
+  },
+  "project": "Проект",
+  "today": "Сегодня",
+  "expand": "Показать фазы: {{name}}",
+  "collapse": "Скрыть фазы: {{name}}",
+  "noPhase": "Нет фазы",
+  "noDates": "Даты не указаны",
+  "barLabel": "{{name}}: {{start}} — {{end}}, {{progress}}%",
+  "empty": "В этом периоде нет проектов",
+  "range": "{{from}} — {{to}}"
+}

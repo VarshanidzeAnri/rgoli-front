@@ -1,10 +1,24 @@
+import '@/styles/globals.css'
+import 'leaflet/dist/leaflet.css'
+import '@/i18n'
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { RouterProvider } from 'react-router'
 
-createRoot(document.getElementById('root')!).render(
+import { ErrorBoundary } from '@/app/ErrorBoundary'
+import { Providers } from '@/app/providers'
+import { router } from '@/app/router'
+
+const root = document.getElementById('root')
+if (!root) throw new Error('#root element is missing')
+
+createRoot(root).render(
   <StrictMode>
-    <App />
+    <ErrorBoundary>
+      <Providers>
+        <RouterProvider router={router} />
+      </Providers>
+    </ErrorBoundary>
   </StrictMode>,
 )

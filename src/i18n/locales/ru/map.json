@@ -1,0 +1,42 @@
+{
+  "eyebrow": "Локации проектов",
+  "subtitle": "Объекты на карте Батуми — радар, OpenStreetMap и Google Maps.",
+  "list": {
+    "title": "Проекты на карте",
+    "noCoords": "Нет координат",
+    "editLocation": "Изменить локацию",
+    "show": "Показать на карте",
+    "located_one": "{{count}} локация",
+    "located_few": "{{count}} локации",
+    "located_many": "{{count}} локаций",
+    "located_other": "{{count}} локации"
+  },
+  "modes": {
+    "label": "Режим карты",
+    "offline": "Offline radar",
+    "osm": "OpenStreetMap",
+    "google": "Google Maps"
+  },
+  "radar": {
+    "label": "Радар проектов",
+    "pin": "{{number}}. {{name}}",
+    "north": "С"
+  },
+  "openInGoogle": "Открыть в Google Maps",
+  "googleTitle": "Карта Google — {{name}}",
+  "clickToSet": "Нажмите на карту, чтобы задать локацию «{{name}}»",
+  "selectFirst": "Выберите проект в списке",
+  "locationSaved": "Локация сохранена",
+  "coords": "{{lat}}, {{lng}}",
+  "empty": {
+    "title": "Нет проектов",
+    "text": "Проекты с координатами появятся здесь."
+  },
+  "dialog": {
+    "title": "Изменить локацию",
+    "description": "Укажите координаты или нажмите на OpenStreetMap.",
+    "lat": "Широта (lat)",
+    "lng": "Долгота (lng)",
+    "address": "Адрес"
+  }
+}

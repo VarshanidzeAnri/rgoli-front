@@ -1,0 +1,63 @@
+{
+  "eyebrow": "Financial overview",
+  "subtitle": "Budgets, client payments and team salary requests.",
+  "kpi": {
+    "totalBudget": "Total budget",
+    "totalHint": "Agreed price across all projects",
+    "paid": "Paid by clients",
+    "paidHint": "{{percent}}% of the budget",
+    "approved": "Approved salaries",
+    "approvedHint": "Total payable",
+    "pending": "Pending requests",
+    "pendingHint": "{{amount}} in total"
+  },
+  "salary": {
+    "approvedToast": "Request approved",
+    "rejectedToast": "Request rejected",
+    "title": "Salary requests",
+    "mine": "My requests",
+    "new": "New request",
+    "approve": "Approve",
+    "reject": "Reject",
+    "edit": "Edit",
+    "withdraw": "Withdraw",
+    "withdrawConfirm": "The request “{{name}}” will be withdrawn.",
+    "withdrawn": "Request withdrawn",
+    "submitted": "Request submitted",
+    "decided": "{{name}} · {{date}}",
+    "requestedBy": "Requested by",
+    "empty": "No requests yet",
+    "filterStatus": "Status",
+    "dialogNew": "Salary request",
+    "dialogEdit": "Edit request",
+    "dialogDescription": "The finance manager will review your request.",
+    "titleLabel": "What for",
+    "titlePlaceholder": "e.g. Topographic plan"
+  },
+  "budget": {
+    "title": "Budget by project",
+    "project": "Project",
+    "budget": "Budget",
+    "agreed": "Agreed",
+    "paid": "Paid",
+    "remaining": "Remaining",
+    "total": "Total",
+    "empty": "No budget data"
+  },
+  "payments": {
+    "title": "Client payments",
+    "add": "Add payment",
+    "edit": "Edit “{{name}}”",
+    "delete": "Delete “{{name}}”",
+    "deleteConfirm": "The payment of {{amount}} ({{date}}) will be deleted.",
+    "paidAt": "Payment date",
+    "method": "Method",
+    "amount": "Amount",
+    "note": "Note",
+    "project": "Project",
+    "empty": "No payments yet",
+    "dialogNew": "New payment",
+    "dialogEdit": "Edit payment",
+    "recordedBy": "Recorded by {{name}}"
+  }
+}

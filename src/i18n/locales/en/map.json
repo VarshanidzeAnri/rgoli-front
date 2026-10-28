@@ -1,0 +1,40 @@
+{
+  "eyebrow": "Project locations",
+  "subtitle": "Sites on the Batumi map — radar, OpenStreetMap and Google Maps.",
+  "list": {
+    "title": "Projects on the map",
+    "noCoords": "No coordinates",
+    "editLocation": "Edit location",
+    "show": "Show on map",
+    "located_one": "{{count}} location",
+    "located_other": "{{count}} locations"
+  },
+  "modes": {
+    "label": "Map mode",
+    "offline": "Offline radar",
+    "osm": "OpenStreetMap",
+    "google": "Google Maps"
+  },
+  "radar": {
+    "label": "Project radar",
+    "pin": "{{number}}. {{name}}",
+    "north": "N"
+  },
+  "openInGoogle": "Open in Google Maps",
+  "googleTitle": "Google map — {{name}}",
+  "clickToSet": "Click the map to set the location of “{{name}}”",
+  "selectFirst": "Select a project from the list",
+  "locationSaved": "Location saved",
+  "coords": "{{lat}}, {{lng}}",
+  "empty": {
+    "title": "No projects",
+    "text": "Projects with coordinates will appear here."
+  },
+  "dialog": {
+    "title": "Edit location",
+    "description": "Enter coordinates or click on OpenStreetMap.",
+    "lat": "Latitude (lat)",
+    "lng": "Longitude (lng)",
+    "address": "Address"
+  }
+}

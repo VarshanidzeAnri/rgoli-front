@@ -1,0 +1,45 @@
+{
+  "status": {
+    "todo": "დასაწყები",
+    "progress": "მიმდინარე",
+    "review": "შემოწმება",
+    "blocked": "ბლოკირებული",
+    "done": "დასრულებული"
+  },
+  "priority": {
+    "low": "დაბალი",
+    "medium": "საშუალო",
+    "high": "მაღალი",
+    "critical": "კრიტიკული"
+  },
+  "payment_status": {
+    "pending": "მოლოდინში",
+    "approved": "დამტკიცებული",
+    "rejected": "უარყოფილი"
+  },
+  "discipline": {
+    "architecture": "არქიტექტურა",
+    "interior": "ინტერიერი",
+    "construction": "მშენებლობა",
+    "finance": "ფინანსები"
+  },
+  "file_type": {
+    "pdf": "PDF",
+    "dwg": "DWG",
+    "image": "სურათი",
+    "doc": "დოკუმენტი",
+    "zip": "არქივი",
+    "other": "სხვა"
+  },
+  "sprint_state": {
+    "planned": "დაგეგმილი",
+    "active": "აქტიური",
+    "completed": "დასრულებული"
+  },
+  "payment_method": {
+    "cash": "ნაღდი",
+    "bank_transfer": "გადარიცხვა",
+    "card": "ბარათი",
+    "other": "სხვა"
+  }
+}

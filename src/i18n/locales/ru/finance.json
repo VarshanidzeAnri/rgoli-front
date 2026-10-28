@@ -1,0 +1,63 @@
+{
+  "eyebrow": "Финансовый обзор",
+  "subtitle": "Бюджеты, платежи клиентов и заявки команды на оплату.",
+  "kpi": {
+    "totalBudget": "Общий бюджет",
+    "totalHint": "Согласованная цена по всем проектам",
+    "paid": "Оплачено клиентами",
+    "paidHint": "{{percent}}% бюджета",
+    "approved": "Одобренные выплаты",
+    "approvedHint": "Всего к выплате",
+    "pending": "Заявки в ожидании",
+    "pendingHint": "Всего {{amount}}"
+  },
+  "salary": {
+    "approvedToast": "Заявка одобрена",
+    "rejectedToast": "Заявка отклонена",
+    "title": "Заявки на оплату",
+    "mine": "Мои заявки",
+    "new": "Новая заявка",
+    "approve": "Одобрить",
+    "reject": "Отклонить",
+    "edit": "Изменить",
+    "withdraw": "Отозвать",
+    "withdrawConfirm": "Заявка «{{name}}» будет отозвана.",
+    "withdrawn": "Заявка отозвана",
+    "submitted": "Заявка отправлена",
+    "decided": "{{name}} · {{date}}",
+    "requestedBy": "Заявитель",
+    "empty": "Заявок пока нет",
+    "filterStatus": "Статус",
+    "dialogNew": "Заявка на оплату",
+    "dialogEdit": "Изменить заявку",
+    "dialogDescription": "Заявку рассмотрит финансовый менеджер.",
+    "titleLabel": "За что",
+    "titlePlaceholder": "например, топографический план"
+  },
+  "budget": {
+    "title": "Бюджет по проектам",
+    "project": "Проект",
+    "budget": "Бюджет",
+    "agreed": "Согласовано",
+    "paid": "Оплачено",
+    "remaining": "Остаток",
+    "total": "Итого",
+    "empty": "Нет данных о бюджете"
+  },
+  "payments": {
+    "title": "Платежи клиентов",
+    "add": "Добавить платёж",
+    "edit": "Изменить «{{name}}»",
+    "delete": "Удалить «{{name}}»",
+    "deleteConfirm": "Платёж {{amount}} ({{date}}) будет удалён.",
+    "paidAt": "Дата оплаты",
+    "method": "Способ",
+    "amount": "Сумма",
+    "note": "Примечание",
+    "project": "Проект",
+    "empty": "Платежей пока нет",
+    "dialogNew": "Новый платёж",
+    "dialogEdit": "Изменить платёж",
+    "recordedBy": "Внёс(ла): {{name}}"
+  }
+}

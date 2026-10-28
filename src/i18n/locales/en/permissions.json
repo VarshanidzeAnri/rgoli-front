@@ -1,0 +1,80 @@
+{
+    "groups": {
+        "projects": "Projects",
+        "issues": "Issues",
+        "files": "Files",
+        "map": "Map",
+        "finance": "Finance",
+        "reports": "Reports",
+        "admin": "Admin"
+    },
+    "roles": {
+        "owner": "Owner",
+        "project_manager": "Project Manager",
+        "architect": "Architect",
+        "interior_designer": "Interior Designer",
+        "finance_manager": "Finance Manager",
+        "member": "Member"
+    },
+    "names": {
+        "projects": {
+            "view": "View projects",
+            "view_all": "View all projects",
+            "create": "Create projects",
+            "update": "Edit projects",
+            "delete": "Delete projects",
+            "manage_members": "Manage members"
+        },
+        "phases": {
+            "manage": "Manage phases"
+        },
+        "issues": {
+            "view": "View tasks",
+            "create": "Create tasks",
+            "update": "Edit tasks",
+            "move": "Change status / move",
+            "delete": "Delete tasks",
+            "comment": "Comment"
+        },
+        "sprints": {
+            "manage": "Manage sprints"
+        },
+        "files": {
+            "view": "View and download files",
+            "upload": "Upload files",
+            "delete_own": "Delete own files",
+            "delete_any": "Delete any file"
+        },
+        "map": {
+            "view": "View map"
+        },
+        "locations": {
+            "update": "Change coordinates"
+        },
+        "finance": {
+            "view": "View finance"
+        },
+        "client_payments": {
+            "manage": "Manage client payments"
+        },
+        "salary": {
+            "request": "Request salary",
+            "approve": "Approve / reject requests"
+        },
+        "reports": {
+            "view": "View reports",
+            "export": "CSV export"
+        },
+        "users": {
+            "view": "View users",
+            "manage": "Manage users"
+        },
+        "roles": {
+            "manage": "Manage roles"
+        },
+        "system": {
+            "export": "JSON data export",
+            "reset_demo": "Reset demo data"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "required": "This field is required",
+  "email": "Enter a valid email",
+  "min": "At least {{min}} characters",
+  "max": "At most {{max}} characters",
+  "number": "Enter a number",
+  "integer": "Enter a whole number",
+  "positive": "Must be greater than 0",
+  "minValue": "At least {{min}}",
+  "maxValue": "At most {{max}}",
+  "date": "Enter a valid date",
+  "endAfterStart": "End can't be before start",
+  "passwordsMatch": "Passwords don't match",
+  "projectKey": "2–10 uppercase Latin letters or digits, starting with a letter",
+  "money": "Enter an amount (e.g. 1250.50)",
+  "fileTooLarge": "“{{name}}” exceeds {{max}}",
+  "fileType": "“{{name}}” — this file type isn't allowed"
+}

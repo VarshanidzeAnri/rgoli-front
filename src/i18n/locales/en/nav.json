@@ -1,0 +1,20 @@
+{
+  "navigation": "Navigation",
+  "management": "Management",
+  "myProjects": "My projects",
+  "dashboard": "Dashboard",
+  "projects": "Projects",
+  "board": "Kanban Board",
+  "backlog": "Backlog & Sprints",
+  "timeline": "Timeline",
+  "calendar": "Calendar",
+  "map": "Map",
+  "files": "Files / Docs",
+  "finance": "Finance / Salary",
+  "reports": "Reports",
+  "users": "Users",
+  "roles": "Roles",
+  "admin": "Admin panel",
+  "profile": "Profile",
+  "noProjects": "You are not on any project yet"
+}

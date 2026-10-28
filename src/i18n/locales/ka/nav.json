@@ -1,0 +1,20 @@
+{
+  "navigation": "ნავიგაცია",
+  "management": "მართვა",
+  "myProjects": "ჩემი პროექტები",
+  "dashboard": "დეშბორდი",
+  "projects": "პროექტები",
+  "board": "Kanban Board",
+  "backlog": "Backlog & Sprints",
+  "timeline": "Timeline",
+  "calendar": "კალენდარი",
+  "map": "რუკა",
+  "files": "ფაილები / Docs",
+  "finance": "ფინანსები / ხელფასი",
+  "reports": "რეპორტები",
+  "users": "მომხმარებლები",
+  "roles": "როლები",
+  "admin": "ადმინ პანელი",
+  "profile": "პროფილი",
+  "noProjects": "ჯერ არ ხართ არცერთ პროექტში"
+}

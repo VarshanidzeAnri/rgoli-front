@@ -1,0 +1,146 @@
+{
+  "eyebrow": "Портфель",
+  "title": "Проекты",
+  "subtitle": "Проекты архитектуры, интерьера и надзора в одном списке.",
+  "new": "Новый проект",
+  "searchPlaceholder": "Поиск по названию, клиенту, адресу, коду...",
+  "searchLabel": "Поиск проектов",
+  "allDisciplines": "Все дисциплины",
+  "statusFilter": "Фильтр по статусу",
+  "disciplineFilter": "Фильтр по дисциплине",
+  "total_one": "{{count}} проект",
+  "total_few": "{{count}} проекта",
+  "total_many": "{{count}} проектов",
+  "total_other": "{{count}} проекта",
+  "columns": {
+    "project": "Проект",
+    "discipline": "Дисциплина",
+    "status": "Статус",
+    "phase": "Текущая фаза",
+    "progress": "Прогресс",
+    "deadline": "Окончание",
+    "members": "Команда",
+    "budget": "Бюджет"
+  },
+  "empty": {
+    "title": "Проекты не найдены",
+    "text": "Измените фильтры или добавьте новый проект."
+  },
+  "noPhase": "Нет фазы",
+  "tabs": {
+    "overview": "Обзор",
+    "phases": "Фазы",
+    "tasks": "Задачи",
+    "files": "Файлы",
+    "payments": "Платежи",
+    "activity": "Активность"
+  },
+  "overview": {
+    "finance": "Финансы",
+    "budget": "Бюджет",
+    "discount": "Цена со скидкой",
+    "paid": "Оплачено",
+    "remaining": "Осталось",
+    "paidShare": "Оплачено {{value}}%",
+    "tasks": "Задачи",
+    "tasksDone": "{{done}} / {{total}} готово",
+    "progress": "Прогресс",
+    "description": "Описание",
+    "noDescription": "Описание не добавлено",
+    "details": "Детали",
+    "client": "Клиент",
+    "phone": "Телефон",
+    "email": "E-mail",
+    "address": "Адрес",
+    "dates": "Сроки",
+    "coordinates": "Координаты",
+    "noCoordinates": "Координаты не указаны",
+    "currentPhase": "Текущая фаза",
+    "members": "Участники",
+    "noMembers": "Нет участников",
+    "manageMembers": "Управление участниками"
+  },
+  "members": {
+    "title": "Управление участниками",
+    "subtitle": "Выберите, кто работает над проектом",
+    "empty": "Нет активных пользователей"
+  },
+  "phases": {
+    "title": "Фазы",
+    "empty": "Фазы ещё не добавлены",
+    "add": "Добавить фазу",
+    "createTitle": "Новая фаза",
+    "editTitle": "Редактировать фазу",
+    "name": "Название",
+    "moveUp": "Поднять",
+    "moveDown": "Опустить",
+    "edit": "Редактировать фазу",
+    "delete": "Удалить фазу",
+    "number": "Фаза {{number}}"
+  },
+  "tasks": {
+    "title": "Задачи",
+    "empty": "В этом проекте пока нет задач",
+    "add": "Новая задача"
+  },
+  "files": {
+    "title": "Файлы",
+    "empty": "В этом проекте пока нет файлов",
+    "upload": "Загрузить файл",
+    "download": "Скачать «{{name}}»"
+  },
+  "payments": {
+    "title": "Платежи клиента",
+    "empty": "Платежей пока нет",
+    "add": "Добавить платёж",
+    "createTitle": "Платёж клиента",
+    "amount": "Сумма (₾)",
+    "paidAt": "Дата оплаты",
+    "method": "Способ",
+    "note": "Примечание",
+    "delete": "Удалить платёж",
+    "total": "Итого: {{amount}}",
+    "recordedBy": "Внёс(ла): {{name}}"
+  },
+  "activity": {
+    "title": "Активность",
+    "empty": "Активности пока нет"
+  },
+  "actions": {
+    "edit": "Изменить",
+    "delete": "Удалить",
+    "openBoard": "Открыть на доске"
+  },
+  "notFound": {
+    "title": "Проект не найден",
+    "text": "Проект удалён или у вас нет к нему доступа.",
+    "back": "К списку проектов"
+  },
+  "form": {
+    "eyebrow": "Проект",
+    "createTitle": "Новый проект",
+    "editTitle": "Редактировать проект",
+    "sectionMain": "Основное",
+    "sectionClient": "Клиент",
+    "sectionMoney": "Бюджет и прогресс",
+    "sectionSchedule": "Сроки и место",
+    "key": "Код",
+    "keyHint": "Например, URK — используется в ключах задач (URK-12)",
+    "name": "Название",
+    "clientName": "Клиент",
+    "clientPhone": "Телефон",
+    "clientEmail": "E-mail",
+    "address": "Адрес",
+    "discipline": "Дисциплина",
+    "status": "Статус",
+    "budget": "Бюджет (₾)",
+    "discountPrice": "Цена со скидкой (₾)",
+    "discountHint": "Итоговая согласованная цена, если отличается",
+    "progress": "Прогресс (%)",
+    "startDate": "Начало",
+    "endDate": "Окончание",
+    "lat": "Широта",
+    "lng": "Долгота",
+    "description": "Описание"
+  }
+}

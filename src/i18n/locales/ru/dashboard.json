@@ -1,0 +1,77 @@
+{
+  "eyebrow": "Рабочий центр",
+  "greeting": "Здравствуйте, {{name}}",
+  "subtitle": "Обзор на сегодня: проекты, задачи, финансы и команда.",
+  "meta": {
+    "team_one": "{{count}} участник команды",
+    "team_few": "{{count}} участника команды",
+    "team_many": "{{count}} участников команды",
+    "team_other": "{{count}} участника команды",
+    "myTasks_one": "{{count}} моя задача на этой неделе",
+    "myTasks_few": "{{count}} мои задачи на этой неделе",
+    "myTasks_many": "{{count}} моих задач на этой неделе",
+    "myTasks_other": "{{count}} моих задачи на этой неделе"
+  },
+  "kpi": {
+    "activeProjects": "Активные проекты",
+    "activeProjectsHint": "Незавершённые проекты",
+    "openTasks": "Открытые задачи",
+    "critical_one": "{{count}} критическая",
+    "critical_few": "{{count}} критические",
+    "critical_many": "{{count}} критических",
+    "critical_other": "{{count}} критической",
+    "budget": "Бюджет портфеля",
+    "budgetHint": "Оплачено {{paid}} · осталось {{remaining}}",
+    "paidShare": "Оплачено клиентами",
+    "pendingSalary": "Заявки в ожидании",
+    "pendingSalaryHint": "Заявки на оплату ждут одобрения"
+  },
+  "projects": {
+    "title": "Проекты",
+    "eyebrow": "Портфель",
+    "distribution": "Распределение по статусам",
+    "empty": "Видимых проектов пока нет",
+    "noPhase": "Нет фазы"
+  },
+  "activity": {
+    "title": "Активность",
+    "eyebrow": "Последние события",
+    "empty": "Активности пока нет",
+    "line": "{{user}} {{verb}} {{subject}}",
+    "system": "Система",
+    "changed": "Изменено: {{fields}}",
+    "verb": {
+      "created": "создал(а)",
+      "updated": "обновил(а)",
+      "deleted": "удалил(а)",
+      "moved": "переместил(а)"
+    },
+    "subject": {
+      "project": "проект",
+      "phase": "фазу",
+      "issue": "задачу",
+      "sprint": "спринт",
+      "comment": "комментарий",
+      "file": "файл",
+      "client_payment": "платёж клиента",
+      "salary_request": "заявку на оплату",
+      "other": "запись"
+    }
+  },
+  "workload": {
+    "title": "Загрузка команды",
+    "eyebrow": "Открытые очки",
+    "empty": "Нет данных о команде",
+    "openTasks_one": "{{count}} открытая задача",
+    "openTasks_few": "{{count}} открытые задачи",
+    "openTasks_many": "{{count}} открытых задач",
+    "openTasks_other": "{{count}} открытой задачи",
+    "load": "{{value}}%",
+    "loadLabel": "Загрузка: {{name}}"
+  },
+  "myWeek": {
+    "title": "Мои задачи на этой неделе",
+    "eyebrow": "Сроки",
+    "empty": "На этой неделе задач со сроком нет"
+  }
+}

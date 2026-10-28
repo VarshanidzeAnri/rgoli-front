@@ -1,0 +1,69 @@
+{
+  "eyebrow": "Work center",
+  "greeting": "Welcome, {{name}}",
+  "subtitle": "Today's overview: projects, tasks, finance and the team.",
+  "meta": {
+    "team_one": "{{count}} team member",
+    "team_other": "{{count}} team members",
+    "myTasks_one": "{{count}} of my tasks this week",
+    "myTasks_other": "{{count}} of my tasks this week"
+  },
+  "kpi": {
+    "activeProjects": "Active projects",
+    "activeProjectsHint": "Projects not yet done",
+    "openTasks": "Open tasks",
+    "critical_one": "{{count}} critical",
+    "critical_other": "{{count}} critical",
+    "budget": "Portfolio budget",
+    "budgetHint": "Paid {{paid}} · remaining {{remaining}}",
+    "paidShare": "Paid by clients",
+    "pendingSalary": "Pending requests",
+    "pendingSalaryHint": "Salary requests awaiting approval"
+  },
+  "projects": {
+    "title": "Projects",
+    "eyebrow": "Portfolio",
+    "distribution": "Status distribution",
+    "empty": "No visible projects yet",
+    "noPhase": "No phase"
+  },
+  "activity": {
+    "title": "Activity",
+    "eyebrow": "Latest events",
+    "empty": "No activity yet",
+    "line": "{{user}} {{verb}} {{subject}}",
+    "system": "System",
+    "changed": "Changed: {{fields}}",
+    "verb": {
+      "created": "created",
+      "updated": "updated",
+      "deleted": "deleted",
+      "moved": "moved"
+    },
+    "subject": {
+      "project": "project",
+      "phase": "phase",
+      "issue": "task",
+      "sprint": "sprint",
+      "comment": "comment",
+      "file": "file",
+      "client_payment": "client payment",
+      "salary_request": "salary request",
+      "other": "record"
+    }
+  },
+  "workload": {
+    "title": "Team workload",
+    "eyebrow": "Open points",
+    "empty": "No team data",
+    "openTasks_one": "{{count}} open task",
+    "openTasks_other": "{{count}} open tasks",
+    "load": "{{value}}%",
+    "loadLabel": "{{name}}'s workload"
+  },
+  "myWeek": {
+    "title": "My tasks due this week",
+    "eyebrow": "Deadlines",
+    "empty": "No tasks due this week"
+  }
+}
