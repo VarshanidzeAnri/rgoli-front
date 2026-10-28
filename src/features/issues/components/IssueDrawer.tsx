@@ -1,18 +1,17 @@
 import { PencilIcon, Trash2Icon } from 'lucide-react'
-import { useId, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 
-import { Can, ConfirmDialog, ErrorState, PriorityPill, StatusPill } from '@/components/kit'
+import { Can, ConfirmDialog, DatePicker, ErrorState, Field, OptionSelect, PriorityPill, StatusPill } from '@/components/kit'
 import { Button } from '@/components/ui/button'
-import { Input, NativeSelect } from '@/components/ui/input'
-import { Label, Skeleton } from '@/components/ui/misc'
+import { Input } from '@/components/ui/input'
+import { Skeleton } from '@/components/ui/misc'
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from '@/components/ui/sheet'
 import { useDeleteIssueMutation, useGetIssueQuery, useMoveIssueMutation, useUpdateIssueMutation } from '@/features/issues/api'
 import { useCan } from '@/hooks/useCan'
 import { useFormat } from '@/hooks/useFormat'
-import { cn } from '@/lib/cn'
 import { isOverdue } from '@/lib/format'
 import { PRIORITIES, STATUSES, type Priority, type Status } from '@/lib/enums'
 
@@ -21,11 +20,10 @@ import { IssueComments } from './IssueComments'
 import IssueFormDialog from './IssueFormDialog'
 
 /** Points field that saves on blur (1–100); resets to the saved value when invalid. */
-function PointsInput({ id, points, disabled, onCommit }: { id: string; points: number; disabled: boolean; onCommit: (points: number) => void }) {
+function PointsInput({ points, disabled, onCommit }: { points: number; disabled: boolean; onCommit: (points: number) => void }) {
   const [value, setValue] = useState(String(points))
   return (
     <Input
-      id={id}
       type="number"
       min={1}
       max={100}
@@ -51,7 +49,8 @@ const isPriority = (v: string): v is Priority => (PRIORITIES as readonly string[
 export function IssueDrawer({ issueId, onClose }: { issueId: number | null; onClose: () => void }) {
   const { t } = useTranslation(['board', 'common', 'enums'])
   const f = useFormat()
-  const ids = { status: useId(), priority: useId(), due: useId(), points: useId(), assignees: useId() }
+  const statusOptions = useMemo(() => STATUSES.map((s) => ({ value: s, label: t(`enums:status.${s}`) })), [t])
+  const priorityOptions = useMemo(() => PRIORITIES.map((p) => ({ value: p, label: t(`enums:priority.${p}`) })), [t])
   const canUpdate = useCan('issues.update')
   const canMove = useCan('issues.move')
   const { data: issue, isLoading, isError, refetch } = useGetIssueQuery(issueId ?? 0, { skip: issueId === null })
@@ -96,72 +95,49 @@ export function IssueDrawer({ issueId, onClose }: { issueId: number | null; onCl
             {issue.description ? <p className="text-[13px] whitespace-pre-wrap text-muted-foreground">{issue.description}</p> : null}
 
             <section className="grid gap-4 sm:grid-cols-2" aria-label={t('issue.details')}>
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor={ids.status}>{t('issue.moveTo')}</Label>
-                <NativeSelect
-                  id={ids.status}
+              <Field label={t('issue.moveTo')}>
+                <OptionSelect
                   value={issue.status}
                   disabled={!canMove}
-                  onChange={(e) => {
-                    if (isStatus(e.target.value)) void moveIssue({ id: issue.id, status: e.target.value, after_id: null })
+                  options={statusOptions}
+                  onChange={(v) => {
+                    if (v && isStatus(v) && v !== issue.status) void moveIssue({ id: issue.id, status: v, after_id: null })
                   }}
-                >
-                  {STATUSES.map((s) => (
-                    <option key={s} value={s}>
-                      {t(`enums:status.${s}`)}
-                    </option>
-                  ))}
-                </NativeSelect>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor={ids.priority}>{t('common:fields.priority')}</Label>
-                <NativeSelect
-                  id={ids.priority}
+                />
+              </Field>
+              <Field label={t('common:fields.priority')}>
+                <OptionSelect
                   value={issue.priority}
                   disabled={!canUpdate}
-                  onChange={(e) => {
-                    if (isPriority(e.target.value)) void quickEdit({ id: issue.id, priority: e.target.value })
+                  options={priorityOptions}
+                  onChange={(v) => {
+                    if (v && isPriority(v) && v !== issue.priority) void quickEdit({ id: issue.id, priority: v })
                   }}
-                >
-                  {PRIORITIES.map((p) => (
-                    <option key={p} value={p}>
-                      {t(`enums:priority.${p}`)}
-                    </option>
-                  ))}
-                </NativeSelect>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor={ids.due}>{t('common:fields.dueDate')}</Label>
-                <div className="relative">
-                  <Input
-                    id={ids.due}
-                    type="date"
-                    value={issue.due_date ?? ''}
-                    disabled={!canUpdate}
-                    className={cn(isOverdue(issue.due_date) && issue.status !== 'done' && 'text-destructive')}
-                    onChange={(e) => void quickEdit({ id: issue.id, due_date: e.target.value || null })}
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor={ids.points}>{t('common:fields.points')}</Label>
+                />
+              </Field>
+              <Field label={t('common:fields.dueDate')} hint={isOverdue(issue.due_date) && issue.status !== 'done' ? t('common:overdue') : undefined}>
+                <DatePicker
+                  value={issue.due_date}
+                  disabled={!canUpdate}
+                  clearable
+                  onChange={(due_date) => void quickEdit({ id: issue.id, due_date })}
+                />
+              </Field>
+              <Field label={t('common:fields.points')}>
                 <PointsInput
                   key={`${issue.id}:${issue.points}`}
-                  id={ids.points}
                   points={issue.points}
                   disabled={!canUpdate}
                   onCommit={(points) => void quickEdit({ id: issue.id, points })}
                 />
-              </div>
-              <div className="flex flex-col gap-1.5 sm:col-span-2">
-                <Label id={ids.assignees}>{t('common:fields.assignees')}</Label>
+              </Field>
+              <Field label={t('common:fields.assignees')} className="sm:col-span-2">
                 <AssigneePicker
-                  labelledBy={ids.assignees}
                   disabled={!canUpdate}
                   value={issue.assignees?.map((a) => a.id) ?? []}
                   onChange={(assignee_ids) => void quickEdit({ id: issue.id, assignee_ids })}
                 />
-              </div>
+              </Field>
             </section>
 
             {issue.created_at ? <p className="text-[11px] text-muted-foreground">{t('issue.created_at', { date: f.date(issue.created_at) })}</p> : null}
@@ -199,4 +175,9 @@ export function IssueDrawer({ issueId, onClose }: { issueId: number | null; onCl
                 })
               }
             />
-          </
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  )
+}

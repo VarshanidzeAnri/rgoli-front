@@ -165,5 +165,13 @@
   },
   "unassigned": "მიუნიჭებელი",
   "overdue": "ვადაგადაცილებული",
-  "of": "{{value}} / {{total}}"
+  "of": "{{value}} / {{total}}",
+  "datePicker": {
+    "placeholder": "აირჩიეთ თარიღი"
+  },
+  "combobox": {
+    "placeholder": "აირჩიეთ…",
+    "search": "ძებნა…",
+    "remove": "{{name}} — წაშლა"
+  }
 }

@@ -204,6 +204,15 @@
     color: hsl(var(--muted-foreground));
   }
 
+  /* Georgian has no letter case and JetBrains Mono has no Georgian glyphs: use the sans font, no tracking. */
+  :lang(ka) .micro-label {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
   .num {
     font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;

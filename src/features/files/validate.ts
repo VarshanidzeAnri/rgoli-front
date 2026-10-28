@@ -1,6 +1,9 @@
 import type { AppConfig } from '@/types/api'
 
-export type FileProblem = { name: string; kind: 'fileTooLarge' | 'fileType' }
+export interface FileProblem {
+  name: string
+  kind: 'fileTooLarge' | 'fileType'
+}
 
 /** Client-side mirror of the API rules (size per file, allowed extensions). The API still validates. */
 export function validateFiles(files: File[], uploads: AppConfig['uploads'] | undefined): FileProblem[] {

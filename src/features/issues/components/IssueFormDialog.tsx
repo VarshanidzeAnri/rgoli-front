@@ -1,19 +1,18 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useEffect, useId } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { Field } from '@/components/kit'
+import { Combobox, DatePicker, Field, OptionSelect, type ComboOption } from '@/components/kit'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogBody, DialogContent, DialogFooter, DialogHeader } from '@/components/ui/dialog'
-import { Input, NativeSelect, Textarea } from '@/components/ui/input'
-import { Label } from '@/components/ui/misc'
+import { Input, Textarea } from '@/components/ui/input'
 import type { GlobalDialogProps } from '@/features/dialogs/GlobalDialogs'
 import { useCreateIssueMutation, useGetIssueQuery, useUpdateIssueMutation } from '@/features/issues/api'
 import { useGetProjectsQuery } from '@/features/projects/api'
-import { PRIORITIES, STATUSES, type Status } from '@/lib/enums'
+import { PRIORITIES, STATUSES, type Priority, type Status } from '@/lib/enums'
 import { applyServerErrors, nullable, useFieldError } from '@/lib/forms'
 
 import { AssigneePicker } from './AssigneePicker'
@@ -29,6 +28,9 @@ const schema = z.object({
   assignee_ids: z.array(z.number()),
 })
 
+const isStatus = (v: string): v is Status => (STATUSES as readonly string[]).includes(v)
+const isPriority = (v: string): v is Priority => (PRIORITIES as readonly string[]).includes(v)
+
 export type IssueFormValues = z.infer<typeof schema>
 
 /**
@@ -38,10 +40,13 @@ export type IssueFormValues = z.infer<typeof schema>
 export default function IssueFormDialog({ open, onClose, id, projectId, initialStatus }: GlobalDialogProps & { initialStatus?: Status }) {
   const { t } = useTranslation(['board', 'common', 'enums'])
   const fieldError = useFieldError()
-  const assigneesLabel = useId()
   const editing = id !== undefined
   const { data: issue } = useGetIssueQuery(id ?? 0, { skip: !editing })
   const { data: projects } = useGetProjectsQuery({ per_page: 100, sort: 'name' })
+  const projectOptions = useMemo<ComboOption[]>(
+    () => (projects?.data ?? []).map((p) => ({ value: p.id, label: p.name, hint: p.key })),
+    [projects],
+  )
   const [createIssue, createState] = useCreateIssueMutation()
   const [updateIssue, updateState] = useUpdateIssueMutation()
 
@@ -112,14 +117,21 @@ export default function IssueFormDialog({ open, onClose, id, projectId, initialS
           <DialogHeader eyebrow={t('issue.eyebrow')} title={editing ? t('issue.editTitle') : t('issue.createTitle')} />
           <DialogBody className="grid gap-4 sm:grid-cols-2">
             <Field label={t('common:fields.project')} error={err(errors.project_id?.message)} className="sm:col-span-2">
-              <NativeSelect disabled={editing} {...register('project_id', { valueAsNumber: true })}>
-                <option value={0}>{t('issue.selectProject')}</option>
-                {projects?.data.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.key} · {p.name}
-                  </option>
-                ))}
-              </NativeSelect>
+              <Controller
+                control={control}
+                name="project_id"
+                render={({ field }) => (
+                  <Combobox
+                    ref={field.ref}
+                    disabled={editing}
+                    value={field.value || null}
+                    onChange={(v) => field.onChange(v ?? 0)}
+                    options={projectOptions}
+                    placeholder={t('issue.selectProject')}
+                    searchPlaceholder={t('common:actions.search')}
+                  />
+                )}
+              />
             </Field>
             <Field label={t('common:fields.title')} error={err(errors.title?.message)} className="sm:col-span-2">
               <Input placeholder={t('issue.titlePlaceholder')} {...register('title')} />
@@ -129,38 +141,55 @@ export default function IssueFormDialog({ open, onClose, id, projectId, initialS
             </Field>
             {!editing ? (
               <Field label={t('common:fields.status')} error={err(errors.status?.message)}>
-                <NativeSelect {...register('status')}>
-                  {STATUSES.map((s) => (
-                    <option key={s} value={s}>
-                      {t(`enums:status.${s}`)}
-                    </option>
-                  ))}
-                </NativeSelect>
+                <Controller
+                  control={control}
+                  name="status"
+                  render={({ field }) => (
+                    <OptionSelect
+                      ref={field.ref}
+                      value={field.value}
+                      onChange={(v) => {
+                        if (v && isStatus(v)) field.onChange(v)
+                      }}
+                      options={STATUSES.map((s) => ({ value: s, label: t(`enums:status.${s}`) }))}
+                    />
+                  )}
+                />
               </Field>
             ) : null}
             <Field label={t('common:fields.priority')} error={err(errors.priority?.message)}>
-              <NativeSelect {...register('priority')}>
-                {PRIORITIES.map((p) => (
-                  <option key={p} value={p}>
-                    {t(`enums:priority.${p}`)}
-                  </option>
-                ))}
-              </NativeSelect>
+              <Controller
+                control={control}
+                name="priority"
+                render={({ field }) => (
+                  <OptionSelect
+                    ref={field.ref}
+                    value={field.value}
+                    onChange={(v) => {
+                      if (v && isPriority(v)) field.onChange(v)
+                    }}
+                    options={PRIORITIES.map((p) => ({ value: p, label: t(`enums:priority.${p}`) }))}
+                  />
+                )}
+              />
             </Field>
             <Field label={t('common:fields.dueDate')} error={err(errors.due_date?.message)}>
-              <Input type="date" {...register('due_date')} />
+              <Controller
+                control={control}
+                name="due_date"
+                render={({ field }) => <DatePicker ref={field.ref} value={field.value || null} onChange={(v) => field.onChange(v ?? '')} clearable />}
+              />
             </Field>
             <Field label={t('common:fields.points')} error={err(errors.points?.message)}>
               <Input type="number" min={1} max={100} inputMode="numeric" {...register('points', { valueAsNumber: true })} />
             </Field>
-            <div className="flex flex-col gap-1.5 sm:col-span-2">
-              <Label id={assigneesLabel}>{t('common:fields.assignees')}</Label>
+            <Field label={t('common:fields.assignees')} className="sm:col-span-2">
               <Controller
                 control={control}
                 name="assignee_ids"
-                render={({ field }) => <AssigneePicker value={field.value} onChange={field.onChange} labelledBy={assigneesLabel} />}
+                render={({ field }) => <AssigneePicker value={field.value} onChange={field.onChange} />}
               />
-            </div>
+            </Field>
           </DialogBody>
           <DialogFooter>
             <Button variant="ghost" onClick={onClose}>

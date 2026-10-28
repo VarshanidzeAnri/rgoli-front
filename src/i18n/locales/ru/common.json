@@ -179,5 +179,13 @@
   },
   "unassigned": "Не назначено",
   "overdue": "Просрочено",
-  "of": "{{value}} из {{total}}"
+  "of": "{{value}} из {{total}}",
+  "datePicker": {
+    "placeholder": "Выберите дату"
+  },
+  "combobox": {
+    "placeholder": "Выберите…",
+    "search": "Поиск…",
+    "remove": "Убрать {{name}}"
+  }
 }

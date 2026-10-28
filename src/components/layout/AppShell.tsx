@@ -35,7 +35,7 @@ function Topbar() {
           <MenuIcon />
         </Button>
         <Logo compact className="lg:hidden" />
-        <p className="hidden truncate font-mono text-[11px] tracking-[0.25em] text-muted-foreground uppercase md:block lg:w-[244px]">{pageName}</p>
+        <p className="micro-label hidden truncate md:block lg:w-[244px]">{pageName}</p>
 
         <button
           type="button"

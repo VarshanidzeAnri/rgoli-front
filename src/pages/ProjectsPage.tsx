@@ -2,9 +2,9 @@ import { FolderSearchIcon, PlusIcon, SearchIcon } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Can, EmptyState, ErrorState, ListSkeleton, PageHero, Pagination, Panel, Pill } from '@/components/kit'
+import { Can, EmptyState, ErrorState, ListSkeleton, OptionSelect, PageHero, Pagination, Panel, Pill } from '@/components/kit'
 import { Button } from '@/components/ui/button'
-import { Input, NativeSelect } from '@/components/ui/input'
+import { Input } from '@/components/ui/input'
 import { useGetProjectsQuery } from '@/features/projects/api'
 import { ProjectCards, ProjectTable } from '@/features/projects/components/ProjectList'
 import { useDebounced } from '@/hooks/useDebounced'
@@ -92,22 +92,17 @@ export default function ProjectsPage() {
               className="pl-9"
             />
           </div>
-          <NativeSelect
+          <OptionSelect
             value={discipline}
             aria-label={t('disciplineFilter')}
-            onChange={(e) => {
-              setDiscipline(e.target.value as Discipline | '')
+            onChange={(v) => {
+              setDiscipline((v ?? '') as Discipline | '')
               setPage(1)
             }}
+            emptyLabel={t('allDisciplines')}
+            options={DISCIPLINES.map((d) => ({ value: d, label: t(`enums:discipline.${d}`) }))}
             className="lg:w-56"
-          >
-            <option value="">{t('allDisciplines')}</option>
-            {DISCIPLINES.map((d) => (
-              <option key={d} value={d}>
-                {t(`enums:discipline.${d}`)}
-              </option>
-            ))}
-          </NativeSelect>
+          />
         </div>
 
         <div role="group" aria-label={t('statusFilter')} className="flex flex-wrap gap-2">

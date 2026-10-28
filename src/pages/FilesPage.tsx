@@ -4,9 +4,8 @@ import { useSearchParams } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 
-import { Can, CardsSkeleton, ConfirmDialog, EmptyState, ErrorState, PageHero, Pagination, Panel, Pill } from '@/components/kit'
+import { Can, CardsSkeleton, Combobox, OptionSelect, ConfirmDialog, EmptyState, ErrorState, PageHero, Pagination, Panel, Pill } from '@/components/kit'
 import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { useDeleteFileMutation, useGetFilesQuery } from '@/features/files/api'
 import { FileCard } from '@/features/files/components/FileCard'
 import { FileDropzone } from '@/features/files/components/FileDropzone'
@@ -15,7 +14,6 @@ import { useDebounced } from '@/hooks/useDebounced'
 import { FILE_TYPES, type FileType } from '@/lib/enums'
 import type { ProjectFile } from '@/types/api'
 
-const ALL = 'all'
 
 export default function FilesPage() {
   const { t } = useTranslation(['files', 'nav', 'enums', 'common'])
@@ -64,44 +62,28 @@ export default function FilesPage() {
                 className="pl-9"
               />
             </div>
-            <Select
-              value={type || ALL}
-              onValueChange={(v) => {
-                setType(v === ALL ? '' : (v as FileType))
+            <OptionSelect
+              className="sm:w-44"
+              aria-label={t('filters.type')}
+              value={type}
+              emptyLabel={t('filters.allTypes')}
+              onChange={(v) => {
+                setType((v ?? '') as FileType | '')
                 setPage(1)
               }}
-            >
-              <SelectTrigger className="sm:w-44" aria-label={t('filters.type')}>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value={ALL}>{t('filters.allTypes')}</SelectItem>
-                {FILE_TYPES.map((ft) => (
-                  <SelectItem key={ft} value={ft}>
-                    {t(`enums:file_type.${ft}`)}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <Select
-              value={projectId ? String(projectId) : ALL}
-              onValueChange={(v) => {
-                setProjectId(v === ALL ? null : Number(v))
+              options={FILE_TYPES.map((ft) => ({ value: ft, label: t(`enums:file_type.${ft}`) }))}
+            />
+            <Combobox
+              className="sm:w-56"
+              aria-label={t('filters.project')}
+              value={projectId}
+              placeholder={t('filters.allProjects')}
+              onChange={(v) => {
+                setProjectId(v)
                 setPage(1)
               }}
-            >
-              <SelectTrigger className="sm:w-56" aria-label={t('filters.project')}>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value={ALL}>{t('filters.allProjects')}</SelectItem>
-                {projects?.data.map((p) => (
-                  <SelectItem key={p.id} value={String(p.id)}>
-                    {p.key} · {p.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+              options={(projects?.data ?? []).map((p) => ({ value: p.id, label: p.name, hint: p.key }))}
+            />
           </div>
 
           {isLoading ? (

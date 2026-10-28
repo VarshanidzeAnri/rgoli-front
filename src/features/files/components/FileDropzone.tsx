@@ -5,8 +5,7 @@ import { toast } from 'sonner'
 
 import { Field, ProgressBar } from '@/components/kit'
 import { Button } from '@/components/ui/button'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { useGetProjectsQuery } from '@/features/projects/api'
+import { ProjectSelect } from '@/features/finance/components/ProjectSelect'
 import { useGetConfigQuery } from '@/features/workspace/api'
 import { useFormat } from '@/hooks/useFormat'
 import { cn } from '@/lib/cn'
@@ -26,7 +25,6 @@ export function FileDropzone({ projectId: initialProjectId, onUploaded }: { proj
   const inputId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
   const { data: config } = useGetConfigQuery()
-  const { data: projects } = useGetProjectsQuery({ per_page: 100 })
   const uploads = useAppSelector(selectUploads)
   const [upload] = useUploadFilesMutation()
   const [projectId, setProjectId] = useState<number | null>(initialProjectId ?? null)
@@ -78,18 +76,7 @@ export function FileDropzone({ projectId: initialProjectId, onUploaded }: { proj
   return (
     <div className="flex flex-col gap-4">
       <Field label={t('upload.project')}>
-        <Select value={projectId ? String(projectId) : ''} onValueChange={(v) => setProjectId(Number(v))}>
-          <SelectTrigger>
-            <SelectValue placeholder={t('upload.selectProject')} />
-          </SelectTrigger>
-          <SelectContent>
-            {projects?.data.map((p) => (
-              <SelectItem key={p.id} value={String(p.id)}>
-                {p.key} · {p.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <ProjectSelect value={projectId ? String(projectId) : ''} onChange={(v) => setProjectId(v ? Number(v) : null)} />
       </Field>
 
       <div

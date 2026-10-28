@@ -1,18 +1,20 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useEffect, useMemo, type ReactNode } from 'react'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 
-import { Field } from '@/components/kit'
+import { DatePicker, Field, OptionSelect } from '@/components/kit'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogBody, DialogContent, DialogFooter, DialogHeader } from '@/components/ui/dialog'
-import { Input, NativeSelect, Textarea } from '@/components/ui/input'
+import { Input, Textarea } from '@/components/ui/input'
 import { Skeleton } from '@/components/ui/misc'
 import type { GlobalDialogProps } from '@/features/dialogs/GlobalDialogs'
 import { useCan } from '@/hooks/useCan'
-import { DISCIPLINES, STATUSES } from '@/lib/enums'
+import { cn } from '@/lib/cn'
+import { DISCIPLINE_TONE, DISCIPLINES, STATUS_TONE, STATUSES } from '@/lib/enums'
+import { TONE_DOT } from '@/lib/tones'
 import { applyServerErrors, useFieldError } from '@/lib/forms'
 
 import { useCreateProjectMutation, useGetProjectQuery, useUpdateProjectMutation } from '../api'
@@ -41,6 +43,7 @@ export default function ProjectFormDialog({ open, onClose, id }: GlobalDialogPro
   const schema = useMemo(() => makeProjectSchema(!isEdit || canSeeFinance), [isEdit, canSeeFinance])
   const {
     register,
+    control,
     handleSubmit,
     reset,
     setError,
@@ -90,22 +93,38 @@ export default function ProjectFormDialog({ open, onClose, id }: GlobalDialogPro
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Field label={t('form.discipline')} error={err(errors.discipline?.message)}>
-                      <NativeSelect {...register('discipline')}>
-                        {DISCIPLINES.map((d) => (
-                          <option key={d} value={d}>
-                            {t(`enums:discipline.${d}`)}
-                          </option>
-                        ))}
-                      </NativeSelect>
+                      <Controller
+                        control={control}
+                        name="discipline"
+                        render={({ field }) => (
+                          <OptionSelect
+                            value={field.value}
+                            onChange={(v) => field.onChange(v ?? 'architecture')}
+                            options={DISCIPLINES.map((d) => ({
+                              value: d,
+                              label: t(`enums:discipline.${d}`),
+                              icon: <span aria-hidden className={cn('size-2 rounded-full', TONE_DOT[DISCIPLINE_TONE[d]])} />,
+                            }))}
+                          />
+                        )}
+                      />
                     </Field>
                     <Field label={t('form.status')} error={err(errors.status?.message)}>
-                      <NativeSelect {...register('status')}>
-                        {STATUSES.map((s) => (
-                          <option key={s} value={s}>
-                            {t(`enums:status.${s}`)}
-                          </option>
-                        ))}
-                      </NativeSelect>
+                      <Controller
+                        control={control}
+                        name="status"
+                        render={({ field }) => (
+                          <OptionSelect
+                            value={field.value}
+                            onChange={(v) => field.onChange(v ?? 'todo')}
+                            options={STATUSES.map((s) => ({
+                              value: s,
+                              label: t(`enums:status.${s}`),
+                              icon: <span aria-hidden className={cn('size-2 rounded-full', TONE_DOT[STATUS_TONE[s]])} />,
+                            }))}
+                          />
+                        )}
+                      />
                     </Field>
                   </div>
                   <Field label={t('form.description')} error={err(errors.description?.message)}>
@@ -148,10 +167,24 @@ export default function ProjectFormDialog({ open, onClose, id }: GlobalDialogPro
                 <Section title={t('form.sectionSchedule')}>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Field label={t('form.startDate')} error={err(errors.start_date?.message)}>
-                      <Input type="date" {...register('start_date')} />
+                      <Controller
+                        control={control}
+                        name="start_date"
+                        render={({ field }) => <DatePicker value={field.value} onChange={(v) => field.onChange(v ?? '')} />}
+                      />
                     </Field>
                     <Field label={t('form.endDate')} error={err(errors.end_date?.message)}>
-                      <Input type="date" {...register('end_date')} />
+                      <Controller
+                        control={control}
+                        name="end_date"
+                        render={({ field }) => (
+                          <Controller
+                            control={control}
+                            name="start_date"
+                            render={({ field: start }) => <DatePicker value={field.value} min={start.value || null} onChange={(v) => field.onChange(v ?? '')} />}
+                          />
+                        )}
+                      />
                     </Field>
                   </div>
                   <Field label={t('form.address')} error={err(errors.address?.message)}>

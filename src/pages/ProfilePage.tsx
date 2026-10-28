@@ -110,6 +110,7 @@ function AvatarForm() {
             type="file"
             accept={AVATAR_TYPES.join(',')}
             className="sr-only"
+            aria-label={t('avatar.choose')}
             aria-describedby={`${inputId}-hint`}
             onChange={(e) => {
               const picked = e.target.files?.[0] ?? null

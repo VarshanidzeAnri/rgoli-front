@@ -165,5 +165,13 @@
   },
   "unassigned": "Unassigned",
   "overdue": "Overdue",
-  "of": "{{value}} of {{total}}"
+  "of": "{{value}} of {{total}}",
+  "datePicker": {
+    "placeholder": "Pick a date"
+  },
+  "combobox": {
+    "placeholder": "Select…",
+    "search": "Search…",
+    "remove": "Remove {{name}}"
+  }
 }
